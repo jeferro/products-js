@@ -1,0 +1,17 @@
+{
+  "name": "jf-nestjs-mongo",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "deep-equal": "^2.2.2",
+    "mongoose": "^7.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
+  }
+}

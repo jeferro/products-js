@@ -1,0 +1,43 @@
+
+environment:
+  name: local
+  slot: default
+
+
+application:
+  id: products
+  clientId: ${environment.name}.${environment.slot}.${application.id}
+
+
+components:
+  rest:
+    secret: 'jwt-local-password'
+    expiresIn: '7d'
+
+  mongo:
+    uri: 'mongodb://admin:admin@localhost:27017/products?connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1'
+
+  kafka:
+    clientId: ${application.clientId}
+    brokers: [
+      localhost:9092
+    ]
+
+
+modules:
+  infrastructure:
+    port: 3000
+    logQueries: false
+
+  auth:
+    enabled: true
+
+  products:
+    enabled: true
+    groupId: ${application.clientId}.products
+    topic: ${environment.name}.${application.id}.events.private.v1
+
+  productDetails:
+    enabled: true
+    groupId: ${appliation.clientId}.product-details
+    productsTopic: ${modules.products.topic}

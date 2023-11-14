@@ -1,0 +1,39 @@
+# OS
+.DS_Store
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/products.code-workspace
+!.vscode/extensions.json
+
+# Dependencies
+node_modules
+
+# Compiled output
+dist
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+
+# Tests
+coverage
+.nyc_output
+
+
+# Configurations
+config.yaml

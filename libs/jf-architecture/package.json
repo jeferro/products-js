@@ -1,0 +1,17 @@
+{
+  "name": "jf-architecture",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "deep-equal": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
+  }
+}
